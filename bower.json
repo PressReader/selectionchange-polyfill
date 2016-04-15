@@ -13,7 +13,7 @@
     "event",
     "polyfill"
   ],
-  "homepage": "https://github.com/2is10/selectionchange-polyfill",
+  "homepage": "https://github.com/PressReader/selectionchange-polyfill",
   "moduleType": [],
   "version": "1.0.0"
 }
