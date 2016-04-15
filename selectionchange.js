@@ -1,6 +1,14 @@
 // github.com/2is10/selectionchange-polyfill
 
-var selectionchange = (function (undefined) {
+(function (factory) {
+    if (typeof define === 'function' && define.amd) {
+        define([], factory);
+    } else if (typeof module === "object" && module.exports) {
+        module.exports = factory();
+    } else {
+        factory();
+    }
+})(function (undefined) {
 
   var MAC = /^Mac/.test(navigator.platform);
   var MAC_MOVE_KEYS = [65, 66, 69, 70, 78, 80]; // A, B, E, F, P, N from support.apple.com/en-ie/HT201236
@@ -132,9 +140,4 @@ var selectionchange = (function (undefined) {
       return r1[prop] === r2[prop];
     });
   }
-})();
-
-if (typeof module !== 'undefined') {
-    // CommonJS/Node compatibility.
-    module.exports = selectionchange;
-}
+});
